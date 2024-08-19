@@ -1,4 +1,3 @@
 -r main.txt
 ruff
-pyqwe
 faker
