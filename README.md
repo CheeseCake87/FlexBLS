@@ -83,11 +83,9 @@ Now visit http://localhost:7071 (Vite) - this will display the installer page.
 Load the database
 
 ```bash
-flask create-test-admin
-```
-
-```bash
 flask create-clients 10
+# or
+flask create-clients 100
 ```
 
 ### Staging
