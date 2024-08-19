@@ -1,7 +1,11 @@
 import {EyeClosedIcon, EyeOpenIcon} from "../../globals/Icons";
-import {createSignal} from "solid-js";
+import {createSignal, useContext} from "solid-js";
+import {MODE} from "../../../globals";
+import {ContextMain} from "../../../contextManagers/ContextMain";
 
 export default function ChangePassword() {
+
+    const ctxMain = useContext(ContextMain)
 
     const [show_password, set_show_password] = createSignal(false)
     const [show_confirm_password, set_show_confirm_password] = createSignal(false)
@@ -60,7 +64,7 @@ export default function ChangePassword() {
 
                 </div>
                 <div className={'text-sm text-center text-gray-500 p-2'}>
-                    <p>Track-a-tron 1000</p>
+                    <p>MorphBLS {ctxMain.systemVersion()}{MODE}</p>
                 </div>
             </div>
         </div>

@@ -17,19 +17,19 @@ export default function SystemInformation() {
 
     return (
         <div>
-            <h1 className={'m-0 pb-2'}>🤖 Track-a-tron</h1>
-            <p className={'font-bold'}>Track-a-tron is a simple system for tracking things.</p>
+            <h1 className={'m-0 pb-2'}>MorphBLS 🤖</h1>
+            <p className={'font-bold'}>The Morph Business Logic System is designed to be a standardized
+                template to use to build further business logic.</p>
 
             <p className={'pt-2'}>View the project on <a
                 target={'_blank'}
-                href="https://github.com/CheeseCake87/track-a-tron"
+                href="https://github.com/CheeseCake87/MorphBLS"
             >GitHub</a></p>
             <p className={'pt-2'}><small>Version: {ctxMain.systemVersion()}</small></p>
-            <p><small>© 2024 David Carmichael, licensed under GNU AFFERO
-                GENERAL PUBLIC LICENSE Version 3 (19 November 2007)</small></p>
+            <p><small>© 2024 David Carmichael, licensed under the MIT License.</small></p>
             <p><small>A copy of this license can be <a
                 target={'_blank'}
-                href="https://github.com/CheeseCake87/track-a-tron/blob/main/LICENSE"
+                href="https://github.com/CheeseCake87/MorphBLS/blob/main/LICENSE"
             >found here</a></small></p>
         </div>
     )

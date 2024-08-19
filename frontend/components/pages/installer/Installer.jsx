@@ -395,7 +395,7 @@ export default function Installer() {
 
                         <div className={'install-form-group'}>
 
-                            <p className={'text-2xl pb-4'}>🤖 Track-a-tron Installer</p>
+                            <p className={'text-2xl pb-4'}>MorphBLS 🤖 Installer</p>
 
                             <Show when={error().length > 0}>
                                 <div className={'attention-danger'}>
@@ -428,7 +428,7 @@ export default function Installer() {
                     </form>
                 </div>
                 <div className={'text-sm text-center text-gray-500 p-2'}>
-                    <p>Track-a-tron {ctxMain.systemVersion()}{MODE}</p>
+                    <p>MorphBLS {ctxMain.systemVersion()}{MODE}</p>
                 </div>
             </div>
         </div>

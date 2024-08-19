@@ -30,6 +30,8 @@ export default function Login() {
 
                 <div className={'login-form-group'}>
 
+                    <h1 className={'mt-0 text-center'}>🤖</h1>
+
                     <label htmlFor={'username'}
                            className={'select-none'}>
                         Username:
@@ -85,7 +87,7 @@ export default function Login() {
                     <LoginForm/>
                 </div>
                 <div className={'text-sm text-center text-gray-500 p-2'}>
-                    <p>Track-a-tron {ctxMain.systemVersion()}{MODE}</p>
+                    <p>MorphBLS {ctxMain.systemVersion()}{MODE}</p>
                 </div>
             </div>
         </div>

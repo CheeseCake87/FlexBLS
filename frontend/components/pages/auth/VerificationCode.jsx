@@ -1,4 +1,10 @@
+import {MODE} from "../../../globals";
+import {useContext} from "solid-js";
+import {ContextMain} from "../../../contextManagers/ContextMain";
+
 export default function VerificationCode() {
+
+    const ctxMain = useContext(ContextMain)
 
     return (
         <div className={'login-background'}>
@@ -29,7 +35,7 @@ export default function VerificationCode() {
 
                 </div>
                 <div className={'text-sm text-center text-gray-500 p-2'}>
-                    <p>Track-a-tron 1000</p>
+                    <p>MorphBLS {ctxMain.systemVersion()}{MODE}</p>
                 </div>
             </div>
         </div>
