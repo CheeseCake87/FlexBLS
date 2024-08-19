@@ -1,0 +1,7 @@
+flask-imp==5.3.4
+flask-orjson==2.0.0
+vite-transporter==1.0.1
+pytz
+python-dotenv
+requests
+websockets

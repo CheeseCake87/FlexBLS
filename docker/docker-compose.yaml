@@ -1,0 +1,21 @@
+volumes:
+  instance:
+  logs:
+
+services:
+  app:
+    container_name: "com-domain-morph"
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+    env_file:
+      - ../.env
+    ports:
+      # HTTP port:
+      - "4020:7070"
+      # Websock port:
+      - "6020:7070"
+    restart: always
+    volumes:
+      - instance:/morph/instance
+      - logs:/morph/logs

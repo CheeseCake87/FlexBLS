@@ -1,0 +1,25 @@
+[project]
+name = "MorphBLS"
+version = "0.1.1"
+
+[tool.vite_transporter]
+npm_exec = "npm"
+npx_exec = "npx"
+serve_app = "app"
+vite_apps = ["frontend"]
+
+[tool.pyqwe]
+run-stack = "*:flask run --port 7070 --debug"
+run-frontend = "*(frontend):npx vite --host 127.0.0.1 --port 7071"
+run-websockets = "*:python3 app/ws_server"
+run-websockets-reload = "*:watchmedo auto-restart --directory app --pattern='*.py' --recursive -- python3 app/ws_server"
+
+build-frontend = "*(frontend):npx vite build"
+install-frontend = "*(frontend):npm install"
+update-frontend = "*(frontend):npm update"
+
+[tool.ruff]
+src = ["app"]
+fix = true
+show-fixes = true
+output-format = "full"

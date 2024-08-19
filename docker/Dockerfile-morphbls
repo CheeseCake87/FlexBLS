@@ -1,0 +1,13 @@
+# MorphBLS ---
+
+FROM python:3.12-alpine
+
+# Install timezone requirements:
+RUN apk add --update --no-cache linux-headers tzdata
+
+# Install Node:
+RUN apk add --update --no-cache nodejs npm
+
+RUN mkdir -p /morph/logs
+
+# ---
