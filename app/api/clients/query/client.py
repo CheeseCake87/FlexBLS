@@ -50,7 +50,7 @@ def query_search_client(where: t.Dict[str, t.Any]) -> t.List[Client]:
     if not where:
         return []
 
-    wh_ = _client_where_clause(where)
+    wh_ = build_where_clause(Client, where)
 
     if "__limit__" in where:
         se_ = s.select(Client).where(*wh_).limit(where["__limit__"])
@@ -148,47 +148,6 @@ def query_update_client(
 def query_delete_client(
     client_id: int, _auto_commit: bool = True, _flush: bool = True
 ) -> bool:
-    from app.api.workshop.models import (
-        WorkshopTicket,
-        WorkshopTicketDevice,
-        WorkshopTicketItem,
-        WorkshopTicketNote,
-    )
-
-    client_tickets = (
-        db.session.execute(
-            s.select(WorkshopTicket).where(WorkshopTicket.fk_client_id == client_id)  # noqa
-        )
-        .scalars()
-        .all()
-    )
-
-    if client_tickets:
-        for ticket in client_tickets:
-            db.session.execute(
-                s.delete(WorkshopTicketDevice).where(
-                    WorkshopTicketDevice.fk_workshop_ticket_id
-                    == ticket.workshop_ticket_id
-                ),  # noqa
-            )
-
-            db.session.execute(
-                s.delete(WorkshopTicketItem).where(
-                    WorkshopTicketItem.fk_workshop_ticket_id
-                    == ticket.workshop_ticket_id
-                ),  # noqa
-            )
-
-            db.session.execute(
-                s.delete(WorkshopTicketNote).where(
-                    WorkshopTicketNote.fk_workshop_ticket_id
-                    == ticket.workshop_ticket_id
-                ),  # noqa
-            )
-
-        db.session.execute(
-            s.delete(WorkshopTicket).where(WorkshopTicket.fk_client_id == client_id),  # noqa
-        )
 
     wh_ = (Client.client_id == client_id,)
     de_ = s.delete(Client).where(*wh_)
