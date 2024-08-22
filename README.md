@@ -1,6 +1,6 @@
 # FlexBLS 🤖
 
-The Morph Business Logic System is designed to be a standardized template to use
+The Flex Business Logic System is designed to be a standardized template to use
 to build further business logic.
 
 ## Attention 🚨
