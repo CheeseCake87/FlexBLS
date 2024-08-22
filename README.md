@@ -113,7 +113,7 @@ Now visit http://localhost:7070 (Flask) - this will display the installer page.
 
 ## Deployment 🚀
 
-MorphBLS is designed to be deployed on a server with Docker.
+FlexBLS is designed to be deployed on a server with Docker.
 
 ### Attention 🚨
 
@@ -129,7 +129,7 @@ To configure these settings see the following files:
 Build the base Docker image
 
 ```bash
-docker build -f docker/Dockerfile-morphbls -t morphbls .
+docker build -f docker/Dockerfile-flexbls -t flexbls .
 ```
 
 Deploy the Docker compose file.

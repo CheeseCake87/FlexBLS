@@ -1,5 +1,5 @@
 [project]
-name = "MorphBLS"
+name = "FlexBLS"
 version = "0.1.1"
 
 [tool.vite_transporter]

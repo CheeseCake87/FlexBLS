@@ -1,4 +1,4 @@
-# MorphBLS ---
+# FlexBLS ---
 
 FROM python:3.12-alpine
 
@@ -8,6 +8,6 @@ RUN apk add --update --no-cache linux-headers tzdata
 # Install Node:
 RUN apk add --update --no-cache nodejs npm
 
-RUN mkdir -p /morph/logs
+RUN mkdir -p /flex/logs
 
 # ---

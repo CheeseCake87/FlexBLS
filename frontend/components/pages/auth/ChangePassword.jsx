@@ -64,7 +64,7 @@ export default function ChangePassword() {
 
                 </div>
                 <div className={'text-sm text-center text-gray-500 p-2'}>
-                    <p>MorphBLS {ctxMain.systemVersion()}{MODE}</p>
+                    <p>FlexBLS {ctxMain.systemVersion()}{MODE}</p>
                 </div>
             </div>
         </div>

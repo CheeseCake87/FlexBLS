@@ -4,7 +4,7 @@ volumes:
 
 services:
   app:
-    container_name: "com-domain-morph"
+    container_name: "com-domain-flex"
     build:
       context: ../
       dockerfile: docker/Dockerfile
@@ -17,5 +17,5 @@ services:
       - "6020:7070"
     restart: always
     volumes:
-      - instance:/morph/instance
-      - logs:/morph/logs
+      - instance:/flex/instance
+      - logs:/flex/logs

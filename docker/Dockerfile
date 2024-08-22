@@ -1,6 +1,6 @@
-FROM morphbls
+FROM flexbls
 
-WORKDIR /morph
+WORKDIR /flex
 
 # timezone:
 ENV TZ=Europe/London
