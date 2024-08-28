@@ -1,6 +1,6 @@
 # FlexBLS 🤖
 
-The Flex Business Logic System is designed to be a standardized template to use
+The Flex Business Logic System is designed to be a standardized template used
 to build further business logic.
 
 ## Attention 🚨
